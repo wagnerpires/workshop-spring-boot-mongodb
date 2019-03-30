@@ -1,11 +1,17 @@
-package com.wagnerpires.workshopmongo.domain;
+package com.catalinazulu.workshopmongo.domain;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="user")
 public class User implements Serializable {
 	private static final long serialVersionUID = -8392578225971122258L;
 
+	@Id
 	private String id;
+	
 	private String name;
 	private String email;
 	
